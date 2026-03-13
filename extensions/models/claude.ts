@@ -1,10 +1,16 @@
 import { z } from "npm:zod@4";
 
 const GlobalArgsSchema = z.object({
-  apiKey: z.string(),
-  model: z.string().default("claude-sonnet-4-20250514"),
-  systemPrompt: z.string().optional(),
-  maxTokens: z.number().int().positive().default(512),
+  apiKey: z.string().describe("Anthropic API key"),
+  model: z.string().default("claude-sonnet-4-20250514").describe(
+    "Model ID to use",
+  ),
+  systemPrompt: z.string().optional().describe(
+    "System prompt for the conversation",
+  ),
+  maxTokens: z.number().int().positive().default(512).describe(
+    "Maximum tokens in response",
+  ),
 });
 
 const ResultSchema = z.object({
@@ -29,7 +35,7 @@ export const model = {
     generate: {
       description: "Generate text with Claude",
       arguments: z.object({
-        prompt: z.string(),
+        prompt: z.string().describe("The user message to send to Claude"),
       }),
       execute: async (args, context) => {
         const { apiKey, model: modelName, systemPrompt, maxTokens } =

@@ -1,6 +1,6 @@
 manifestVersion: 1
 name: "@keeb/anthropic"
-version: "2026.03.13.1"
+version: "2026.03.13.2"
 description: "Anthropic Claude API text generation"
 repository: https://github.com/keeb/swamp-anthropic
 labels:
