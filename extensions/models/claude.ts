@@ -14,7 +14,7 @@ const ResultSchema = z.object({
 });
 
 export const model = {
-  type: "@user/anthropic/claude",
+  type: "@keeb/anthropic/claude",
   version: "2026.02.14.1",
   globalArguments: GlobalArgsSchema,
   resources: {
