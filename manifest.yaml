@@ -1,13 +1,17 @@
 manifestVersion: 1
 name: "@keeb/anthropic"
-version: "2026.04.06.2"
-description: "Anthropic Claude API text generation"
+version: "2026.10.15.1"
+description: "Generate text with Anthropic Claude from swamp workflows, via the Messages API or the local claude CLI login."
 repository: https://github.com/keeb/swamp-anthropic
 labels:
   - anthropic
   - claude
   - ai
   - llm
+platforms: []
+additionalFiles:
+  - README.md
+  - LICENSE.txt
 models:
   - claude.ts
 skills:
